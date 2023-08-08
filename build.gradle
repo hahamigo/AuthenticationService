@@ -12,9 +12,9 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: 'maven'
 apply plugin: 'application'
 
-group = 'EventManagementProject'
-description = "EventManagementProject"
-mainClassName = "eventManagement.App"
+group = 'AuthenticationService'
+description = "AuthenticationService"
+mainClassName = "authenticationService.App"
 
 sourceCompatibility = 11
 targetCompatibility = 11
