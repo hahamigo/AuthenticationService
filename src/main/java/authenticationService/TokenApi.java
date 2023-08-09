@@ -36,9 +36,8 @@ public class TokenApi {
 		//send it off to the client
 		RestTemplate rt = new RestTemplate();
 		CustomerList customers = rt.getForObject(
-				"http://localhost:8080/api/customers/list", 
+				"http://localhost:8080/api/customerlist", 
 				CustomerList.class);
-//		Collection<Customer> customers = response.getCustomers();
 		System.out.println(customers.toString());
 		
 				for (Customer c : customers.getCustomers()) {
