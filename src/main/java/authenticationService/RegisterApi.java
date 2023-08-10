@@ -51,7 +51,7 @@ public class RegisterApi {
 		System.out.println(json_string);
 		try {
 
-			URL url = new URL("http://localhost:8080/api/customers");
+			URL url = new URL("http://localhost:8080/api/privatecustomer");
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setDoOutput(true);
 			conn.setRequestMethod("POST");
@@ -64,9 +64,9 @@ public class RegisterApi {
 			os.write(json_string.getBytes());
 			os.flush();
 
-			if (conn.getResponseCode() != HttpURLConnection.HTTP_CREATED) {
-				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
-			}
+//			if (conn.getResponseCode() != HttpURLConnection.HTTP_CREATED) {
+//				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
+//			}
 
 			BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
 
